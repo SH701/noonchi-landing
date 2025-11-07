@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -5,24 +6,24 @@ import { blabla } from "@/lib/blabla";
 
 const CARD_W = 336;
 const GAP = 20;
+const PX_PER_SEC = 250;
 
 export default function Slider() {
   const viewportRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLUListElement>(null);
   const [seqCount, setSeqCount] = useState(6);
+  const [duration, setDuration] = useState(15);
 
   useEffect(() => {
     if (!viewportRef.current) return;
-
     const ro = new ResizeObserver(([entry]) => {
       const vw = entry.contentRect.width;
       const unit = CARD_W + GAP;
       const needCards = Math.ceil((vw * 2) / unit);
       const base = Math.ceil(needCards / blabla.length);
       const even = base % 2 ? base + 1 : base;
-
       setSeqCount(Math.max(2, even));
     });
-
     ro.observe(viewportRef.current);
     return () => ro.disconnect();
   }, []);
@@ -32,10 +33,16 @@ export default function Slider() {
     [seqCount]
   );
 
+  useEffect(() => {
+    if (!trackRef.current) return;
+    const trackWidth = trackRef.current.scrollWidth;
+    setDuration(trackWidth / PX_PER_SEC);
+  }, [items.length]);
+
   return (
-    <section className="bg-[#1D2633] md:px-12 md:py-32  py-25 px-6">
+    <section className="bg-[#1D2633] md:px-12 md:py-32 py-25 px-6">
       <div className="mx-auto max-w-6xl text-center">
-        <h2 className="text-[32px] md:text-5xl font-semibold text-white ">
+        <h2 className="text-[32px] md:text-5xl font-semibold text-white">
           Ever studied Korean... but still feel awkward?
         </h2>
         <p className="mt-3 text-gray-400 font-medium pb-10 pt-5 text-sm md:text-base">
@@ -51,8 +58,12 @@ export default function Slider() {
 
         <div className="overflow-hidden w-full" ref={viewportRef}>
           <ul
-            className="flex gap-5 animate-marq [--speed:28s]"
-            style={{ transform: "translateX(-25%)" }}
+            ref={trackRef}
+            className="flex gap-5 animate-marq"
+            style={{
+              transform: "translateX(-25%)",
+              ["--speed" as any]: `${duration}s`,
+            }}
           >
             {items.map((b, i) => (
               <li
