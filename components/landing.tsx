@@ -11,9 +11,7 @@ export default function LandingPage() {
         <button className="w-44 h-16 bg-[#316CEC] text-white rounded-xl font-semibold hover:bg-blue-800 transition-colors">
           Try Noonchi Free
         </button>
-        <div className="mx-auto mt-12.5 h-[500px] w-[334px] border rounded-t-4xl border-gray-500">
-          사진
-        </div>
+        <div className="mx-auto mt-12.5 ">무언가가 들어가야함</div>
       </section>
     </div>
   );
