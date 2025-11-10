@@ -11,7 +11,7 @@ export default function Header() {
         height={24}
         unoptimized
       />
-      <Link href="/noonchi.ai.kr">
+      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfWR4arL2OTyu_udPdfVXgsNaJPdz6njXENucsuhuoBrtKeHw/viewform?usp=sharing&ouid=102925081553376106371">
         <button className="cursor-pointer font-semibold text-[#1d2633] px-4 h-12 border rounded-full border-gray-300 flex items-center gap-2">
           Join beta
           <Image

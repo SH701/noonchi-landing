@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FooterCTA() {
   return (
@@ -18,12 +19,12 @@ export default function FooterCTA() {
           <p className="mt-3 text-base text-slate-300 sm:text-lg">
             Speak naturally, connect deeply
           </p>
-          <a
-            href="#"
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfWR4arL2OTyu_udPdfVXgsNaJPdz6njXENucsuhuoBrtKeHw/viewform?usp=sharing&ouid=102925081553376106371"
             className="mt-8 inline-flex items-center justify-center rounded-xl bg-[#3B6CF6] px-10 py-4 text-base font-medium text-white shadow hover:bg-[#2f5ce6] focus:outline-none focus:ring-4 focus:ring-blue-300 w-1/3 truncate"
           >
             Join Beta
-          </a>
+          </Link>
         </div>
       </section>
       <div className="w-full border-t border-gray-200 bg-white">

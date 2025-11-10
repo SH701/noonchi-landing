@@ -53,8 +53,8 @@ export default function Slider() {
       </div>
 
       <div className="relative mt-10 max-w-8xl">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#1D2633] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#1D2633] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-linear-to-r from-[#1D2633] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-linear-to-l from-[#1D2633] to-transparent" />
 
         <div className="overflow-hidden w-full" ref={viewportRef}>
           <ul
@@ -74,11 +74,13 @@ export default function Slider() {
                   <div className="size-12 grid place-items-center rounded-lg border border-black/5 bg-white">
                     <span className="text-3xl">{b.emoji}</span>
                   </div>
-                  <h3 className="text-white text-2xl font-semibold leading-tight line-clamp-2 min-h-[64px]">
+                  <h3 className="text-white text-2xl font-semibold leading-tight line-clamp-2 min-h-16">
                     {b.title}
                   </h3>
                 </div>
-                <p className="mt-6 text-white/90 leading-relaxed">{b.desc}</p>
+                <p className="mt-6 text-white/90 leading-relaxed text-lg">
+                  {b.desc}
+                </p>
               </li>
             ))}
           </ul>

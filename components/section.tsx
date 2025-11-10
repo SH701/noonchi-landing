@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Section() {
   return (
     <>
@@ -61,14 +63,17 @@ export default function Section() {
             <FeatureCard
               title="Adaptive Tone Engine"
               desc="Real-time tone adjustment — Noonchi teaches the flow Koreans actually use."
+              img="/slider.png"
             />
             <FeatureCard
               title="Real Conversation Coach"
               desc="Get feedback instantly as you chat — Noonchi mirrors how real Koreans talk, correcting your tone naturally."
+              img="/feedback.png"
             />
             <FeatureCard
               title="Cultural Context Insight"
               desc="Learn the emotion and social nuance behind every tone — understand the K-Culture heartbeat."
+              img="/helper3.png"
             />
           </div>
         </section>
@@ -118,14 +123,27 @@ export default function Section() {
   );
 }
 
-function FeatureCard({ title, desc }: { title: string; desc: string }) {
+function FeatureCard({
+  title,
+  desc,
+  img,
+}: {
+  title: string;
+  desc: string;
+  img: string;
+}) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-      <p className="mt-2 text-gray-500 text-sm">{desc}</p>
-
-      <div className="mt-6 flex h-40 items-center justify-center rounded-xl bg-gray-50">
-        <div className="h-28 w-16 rounded-2xl border border-gray-200 bg-white shadow-sm" />
+    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
+      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      <p className="mt-3 text-gray-500 text-base leading-relaxed">{desc}</p>
+      <div className="mt-10 flex items-center justify-center rounded-[20px] bg-gray-50 w-full h-[234px] overflow-hidden">
+        <Image
+          src={img}
+          alt={title}
+          width={240}
+          height={234}
+          className="object-contain scale-110"
+        />
       </div>
     </div>
   );
