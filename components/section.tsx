@@ -136,13 +136,13 @@ function FeatureCard({
     <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
       <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       <p className="mt-3 text-gray-500 text-base leading-relaxed">{desc}</p>
-      <div className="mt-10 flex items-center justify-center rounded-[20px] bg-gray-50 w-full h-[234px] overflow-hidden">
+      <div className="mt-10 flex items-center justify-center rounded-[20px] bg-gray-50 w-full h-[234px] overflow-hidden fill">
         <Image
           src={img}
           alt={title}
           width={240}
           height={234}
-          className="object-contain scale-110"
+          className="object-contain"
         />
       </div>
     </div>
