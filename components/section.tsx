@@ -63,17 +63,17 @@ export default function Section() {
             <FeatureCard
               title="Adaptive Tone Engine"
               desc="Real-time tone adjustment — Noonchi teaches the flow Koreans actually use."
-              img="/slider.png"
+              img="/sections3.png"
             />
             <FeatureCard
               title="Real Conversation Coach"
               desc="Get feedback instantly as you chat — Noonchi mirrors how real Koreans talk, correcting your tone naturally."
-              img="/feedback.png"
+              img="/section2.png"
             />
             <FeatureCard
               title="Cultural Context Insight"
               desc="Learn the emotion and social nuance behind every tone — understand the K-Culture heartbeat."
-              img="/helper3.png"
+              img="/sections1.png"
             />
           </div>
         </section>
