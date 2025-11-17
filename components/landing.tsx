@@ -36,7 +36,7 @@ export default function LandingPage() {
         <div className="mt-10">
           <a
             href={link}
-            className="flex h-[60px] w-[200px] items-center justify-center rounded-[10px] bg-[#316CEC] text-xl font-medium leading-[34px] tracking-[-0.01em] text-white transition-colors hover:bg-[#2555cc]"
+            className="flex h-16 w-[213px] items-center justify-center rounded-[10px] bg-[#316CEC] text-xl font-medium leading-[34px] tracking-[-0.01em] text-white transition-colors hover:bg-[#2555cc]"
           >
             Try Noonchi Free
           </a>
@@ -74,7 +74,7 @@ export default function LandingPage() {
         <div className="mt-8">
           <a
             href={link}
-            className="flex h-[52px] w-[180px] items-center justify-center rounded-[10px] bg-[#316CEC] text-lg font-medium leading-[32px] tracking-[-0.01em] text-white transition-colors hover:bg-[#2555cc]"
+            className="flex h-16 w-[213px] items-center justify-center rounded-[10px] bg-[#316CEC] text-xl font-medium leading-[32px] tracking-[-0.01em] text-white transition-colors hover:bg-[#2555cc]"
           >
             Try Noonchi Free
           </a>
